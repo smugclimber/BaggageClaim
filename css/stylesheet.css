@@ -1,0 +1,31 @@
+body{
+  background-image: url('../images/background-img.jpg');
+  background-color: #cccccc;
+  background-blend-mode: lighten;
+}
+
+.navbar-nav{
+  margin-left: 780px;
+}
+
+.container-fluid{
+  width: 1400px;
+}
+
+.fixed-bottom{
+  background-color:gray;
+  text-align: center;
+  padding-bottom: 15px;
+  color:white;
+}
+
+.p-3 {
+  padding: $spacer !important;
+}
+
+#footer{
+  background-color:gray;
+  text-align: center;
+  padding-bottom: 15px;
+  color:white;
+}
