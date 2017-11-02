@@ -4,6 +4,20 @@ body{
   height: 1100px;
 }
 
+.form-group{
+  width:25%;
+  margin-left:20px;
+  margin-top: 20px;
+}
+.button1, .form-check-input{
+  margin-left: 20px;
+}
+/*Id*/
+/*#btnLogout{
+  float: right;
+  margin-right: 10px;
+}*/
+
 .container-fluid{
   background-image: url('./images/background-img.png');
   background-blend-mode: lighten;
@@ -27,6 +41,18 @@ body{
 .p-3 {
   padding: $spacer !important;
 }
+
+.itemStyle{
+  background-color:gray;
+}
+
+#delete {
+  cursor:pointer;
+  float:right;
+  color:red;
+  font-weight: bold;
+}
+
 
 #footer{
   background-color:gray;
