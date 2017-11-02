@@ -1,77 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Baggage Claim</title>
     <link rel="shortcut icon" href="./images/logo.png" type="image/vnd.microsoft.icon">
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
   </head>
-  <body style="background-color: orange;">
-<!-- HEADER/NAV Bar begins-->
-    <nav class="navbar navbar-expand-md navbar-light bg-light d-flex p-2">
-        <div class="p-2">
-          <a class="navbar-brand" href="index.html"><img src="./images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo missing">Baggage Claim</a>
-          <!--insert logo img-->
+  <body>
+<!--Navigation Total Page -->
+    <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div>
+          <button class="btn btn-info">
+            <div class="collapse navbar-collapse d-flex justify-content-start" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto p-2">
+                <a class="nav-item nav-link" href="register.html" style="color: white" >Login</a>
+              </div>
+            </div>
+          </button>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ml-auto p-2">
-            <a class="nav-item nav-link" href="suitcase.html">Login</a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand"> Baggage Claim </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#header"> Home </a></li>
+            <li><a href="#services"> Services </a></li>
+            <li><a href="#pricing"> Pricing </a></li>
+            <li><a href="#team"> Team </a></li>
+            <li><a href="#clients"> Clients </a></li>
+            <li><a href="#contact"> Contact </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>    <!-- End Navigation -->
+    <!-- Header -->
+    <div id="header" class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <h1> YOUR VIRTUAL SUITCASE</h1>
+            <p> A travel app that allows you to track all of your possessions from destination to destination. Input your items at destination A. Check them off when you arrive at destination B. Simple!</p>
+            <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+            <br>
+            <br>
+            <br>
+            <img src="./images/image1.jpg" width="150" height="150">
+            <img src="./images/image2.jpg" width="150" height="150">
+            <img src="./images/image4.jpg" width="150" height="150">
           </div>
         </div>
-    </nav>
-<!-- HEADER/NAV Bar ends-->
-    <div class="container-fluid box" style="background-color:white; height: 900px; width: 1400px;">
+      </div>
+    </div><!-- End Header -->
 <!-- Container begins-->
-<!-- Row 1 begins-->
-      <div class="row" style="background-color:green;">
-        <div class="col-md-12" style="background-color:#ADD8E6;">
-          <!-- Insert App summary descriptions and Endorement statements/quotes -->
-          <!-- Insert SIGN UP Button here -->
-          <br>
-          <p>A travel app that allows you to track all of your possessions from destination to destination.</p>
-          <br>
-          <br>
-          <br>
-          <div class="d-flex justify-content-center">
-            <p>Sign up for Baggage Claim Today!</p>
+<!-- Services -->
+    <div id="services" class="services">
+      <div class="container">
+        <h2> Services </h2>
+        <p> Baggage Claim offers three item accounatability services.</p>
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <h4> Travel </h4>
+            <p> a virtual suitcase for domestic and international travel as well as gym, overnight, and fashion styling jobs, etc. Keep track of all your goods as you move from point A to point B.</p>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <i class="fa fa-building" aria-hidden="true"></i>
+            <h4> Relocation </h4>
+            <p> A virtual UHaul for relocation. Keep track of your items as you move into that new apartment, on campus into a dorm, into a new office, or across the country into a new home.</p>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+            <h4> Claim Support </h4>
+            <p> Baggage Claim logs your items, each individual valuation, as well as the valuation of the entire suitcase. If property damage or theft occurs, Baggage Claim will submit your log directly to your insurance provider for additional claim support. </p>
           </div>
         </div>
-      </div><!--end of Row 1-->
-<!-- Row 2 begins-->
-      <div class="row" style="background-color:silver;">
-        <div class="col-md-12" style="background-color:#ADD8E6;">
-          <div class="d-flex justify-content-center">
-            <form class="p-3" action="register.html">
-              <input type="submit" value="SIGN UP HERE"/>
-            </form>
+      </div>
+    </div><!-- End Services -->
+    <!-- Pricing -->
+    <div id="pricing" class="pricing">
+      <div class="container">
+        <h2> Pricing </h2>
+        <p> Package Options for Custom Use</p>
+        <div class="row">
+          <div class="col-lg-3 col-md-3">
+            <div class="packages">
+              <h4> Bronze </h4>
+              <h1> FREE </h1>
+              <b> Monthly </b>
+              <p> Basic Virtual Suitcase</p>
+              <hr>
+              <li> Limited Itemization </li>
+              <li> Item Valuation </li>
+              <li> Claim Support </li>
+              <hr>
+              <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="packages">
+              <h4> Silver </h4>
+              <h1> $9.99 </h1>
+              <b> Monthly </b>
+              <p> Premium Virtual Suitcase </p>
+              <hr>
+              <li> Itemization for up to 10 Items </li>
+              <li> Photo Evidence </li>
+              <li> Item Valuation </li>
+              <li> List Storage for Future Trips</li>
+              <li> Claim Support </li>
+              <hr>
+              <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="packages">
+              <h4> Gold </h4>
+              <h1> $29.99 </h1>
+              <b> One Time Purchase </b>
+              <p> Basic Virtual UHaul</p>
+              <hr>
+              <li> Itemization for up to 20 Items</li>
+              <li> Photo Evidence </li>
+              <li> Item Valuation </li>
+              <li> Claim Support </li>
+              <hr>
+              <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="packages">
+              <h4> Ultra </h4>
+              <h1> $49.99</h1>
+              <b> One Time Purchase</b>
+              <p> Premium Virtual UHaul </p>
+              <hr>
+              <li> Itemization for up to 100 Items</li>
+              <li> Photo Evidence </li>
+              <li> Item Valuation </li>
+              <li> Claim Support </li>
+              <hr>
+              <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+            </div>
           </div>
         </div>
-      </div> <!--end of Row 2-->
-<!-- Row 3 begins-->
-      <div class="row" style="background-color:red;">
-        <div class="col-md-12" style="background-color:#ADD8E6;">
-          <div>
-            <br>
-            <p>“Ever rush from hotel room to hotel room and forget your phone charger?!”</p>
-            <br>
-            <p>“Still kicking yourself for forgetting grandma’s pearls in Italy last year?</p>
-            <br>
+      </div> <!--Container end-->
+    </div>  <!-- End Pricing -->
+  <!-- Team -->
+    <div id="team" class="team">
+      <div class="container">
+        <h2> Meet Our Team </h2>
+        <p> Hey! What's Up! Hello!</p>
+        <div class="row">
+          <div class="col-lg-3 col-md-3">
+            <img src="./images/Cory.jpg" width="150" height="150" alt="Cory">
+            <hr>
+            <b> CEO and Founder </b>
+            <hr>
+            <p> Empress Cory of House Lancaster. Czarina of Technology Policy. Destroyer of Algorithmic Bias. Midnight Slack Queen. Goddess of CSS.</p>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <img src="./images/Nick.jpg" width="150" height="150" alt="Nick">
+            <hr>
+            <b> HTML Janitor </b>
+            <hr>
+            <p> His Eminence Nick. Chief of Game Night. Smug Climber of Cliffs. Father of Virtual Reality. Prime Minister of HTML.</p>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <img src="./images/Fitsum.jpg" width="180" height="150" alt="Fitsum">
+            <hr>
+            <b> CEO and Founder </b>
+            <hr>
+            <p> King Fitsum of House Belayneh. Lion of Ethiopia. Czar of User Authentication. Father of Hasset. Monarch of Atom.</p>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <img src="./images/Sean.jpg" width="110" height="150" alt="Sean">
+            <hr>
+            <b> CEO and Founder </b>
+            <hr>
+            <p> Emperor Sean of House Clark. Sultan of Rando Hobbies. Breaker of Firebase. Dog Father. Commander of Apple Products. </p>
           </div>
         </div>
-      </div><!--end of row 3-->
-<!--end of Row 3-->
-<!-- Row 4/FOOTER begins-->
-      <div class="row">
-        <div class="col-md-12">
-          <div class="fixed-bottom d-flex justify-content-center p-3" id="footer"><br>2017@Copyright Baggage Claim<br>
-          </div>
-        </div>
-      </div><!--end of row 4/FOOTER-->
-    </div><!--end of container-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+      </div>
+    </div><!-- End Team  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>
