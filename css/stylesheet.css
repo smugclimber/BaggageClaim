@@ -1,6 +1,11 @@
 body{
-  background-image: url('../images/background-img.jpg');
-  background-color: #cccccc;
+  background-color: orange;
+  background-blend-mode: lighten;
+  height: 1100px;
+}
+
+.container-fluid{
+  background-image: url('./images/background-img.png');
   background-blend-mode: lighten;
 }
 
