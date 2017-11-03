@@ -1,8 +1,8 @@
 //============================================================================================================
 //BELOW IS INVENTORY BUTTON CODE
 //============================================================================================================
-// When the user clicks any button, run addTask.
-$("button").click(addTask);
+// // When the user clicks any button, run addTask.
+// $("button").click(addTask(this));
 
 // Add a listener to the document.
 // It should keep an ear out for a click on elements with an id of "delete".
@@ -16,26 +16,34 @@ $("input").keypress(function(event) {
   if (event.which === 13) {
 
     // If so, run addTask.
-    addTask();
+    addTask(this);
   }
 });
 
 // Function to add a task.
-function addTask() {
-
+function addTask(button) {
+  var task;
+  value = $(button).attr("value");
   // Get the content (value) of the input box.
-  var task = $("#new-task").val();
-  var cellTask = $("#cell-task").val();
-
+  if ($(button).attr("id") === "add" || $(button).attr("id")==="new-task"){
+    task = $("#new-task").val();
+    // Clear the content of the input box.
+    $("#new-task").val("");
+  } else{
+    task = value
+  }
   // Append that content to the #tasks div.
   // Nest our content in another div in another div
   // with a span containing an X.
   // Notice the id? We can delete the task whenever the user clicks the span.
   $("#tasks").append("<div>" + task + "<span id='delete'>X</span></div>");
 
-  // Clear the content of the input box.
-  $("#new-task").val("");
 }
+
+// When the user clicks any button, run addTask.
+$("button").click(function(){
+  addTask(this)
+});
 
 // Function to remove a task.
 function removeTask() {
@@ -85,45 +93,45 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
     var btnSignUp = document.getElementById('btnSignUp');
     var btnLogout = document.getElementById('btnLogout');
 // Add Login event:
-     btnLogin.addEventListener( 'click', e => {
-      // Get email and pass
-       var email = txtEmail.value;
-       var pass = txtPassword.value;
-       var auth = firebase.auth();
-      //  sign-in
-      var promise = auth.signInWithEmailAndPassword(email, pass);
-      promise.catch(e => console.log(e.message));
-    });
+    //  btnLogin.addEventListener( 'click', e => {
+    //   // Get email and pass
+    //    var email = txtEmail.value;
+    //    var pass = txtPassword.value;
+    //    var auth = firebase.auth();
+    //   //  sign-in
+    //   var promise = auth.signInWithEmailAndPassword(email, pass);
+    //   promise.catch(e => console.log(e.message));
+    // });
     // Add SignUp event
     // TODO: CHECK FOR YOUR EMAIL...
-    btnSignUp.addEventListener("click", e =>{
-      var email = txtEmail.value;
-      var pass = txtPassword.value;
-      var auth = firebase.auth();
-      //  signup
-      var promise = auth.createUserWithEmailAndPassword(email, pass);
-      promise
-      .catch(e => console.log(e.message));
-    });
-    btnLogout.addEventListener('click', e => {
-      console.log('here')
-      firebase.auth().signOut().then(function() {
-        console.log('should be logged out');
-          // Sign-out successful.
-        }, function(error) {
-          // An error happened.
-        });
-      })
+    // btnSignUp.addEventListener("click", e =>{
+    //   var email = txtEmail.value;
+    //   var pass = txtPassword.value;
+    //   var auth = firebase.auth();
+    //   //  signup
+    //   var promise = auth.createUserWithEmailAndPassword(email, pass);
+    //   promise
+    //   .catch(e => console.log(e.message));
+    // });
+    // btnLogout.addEventListener('click', e => {
+    //   console.log('here')
+    //   firebase.auth().signOut().then(function() {
+    //     console.log('should be logged out');
+    //       // Sign-out successful.
+    //     }, function(error) {
+    //       // An error happened.
+    //     });
+    //   })
     // Add a realtime listener
-    firebase.auth().onAuthStateChanged(firebaseUser =>{
-      if(firebaseUser){
-        window.location = 'suitcase.html';
-        console.log(firebaseUser);
-        btnLogout.classList.remove("invisible");
-      }
-      else{
-        console.log("not logged in");
-        btnLogout.classList.add("invisible");
-      }
-    });
+    // firebase.auth().onAuthStateChanged(firebaseUser =>{
+    //   if(firebaseUser){
+    //     window.location = 'suitcase.html';
+    //     console.log(firebaseUser);
+    //     btnLogout.classList.remove("invisible");
+    //   }
+    //   else{
+    //     console.log("not logged in");
+    //     btnLogout.classList.add("invisible");
+    //   }
+    // });
   }());

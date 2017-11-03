@@ -30,26 +30,45 @@
 <!-- Row 1 begins-->
       <div class="row" style="background-color:silver;">
 <!-- Row 1 Col1 begins-->
-        <div class="col-md-8" style="background-color:white;">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="txtPassword" placeholder="Password">
-          </div>
-          <div class="button1">
-            <button type="login" id="btnLogin" class="btn btn-primary">Log in</button>
-            <button type="signup" id="btnSignUp" class="btn btn-primary">Sign Up</button>
-            <!-- <button type="logout" id="btnLogout" class="btn btn-action invisible">Log Out</button> -->
-          </div>
-        </div><!-- Row 1 Col2 begins-->
-        <div class="col-md-4" style="background-color:#ADD8E6;">
-          <img src="" alt="image of suitcase missing">
-        </div>
+      <!-- <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script> -->
+        <script> // Initialize Firebase
+          var config =
+          {
+            apiKey: "AIzaSyBU3UytS_kKst5NLalHGVDVtjCXg1_HIoY",
+            authDomain: "mybaggage-b7161.firebaseapp.com",
+            databaseURL: "https://mybaggage-b7161.firebaseio.com",
+            projectId: "mybaggage-b7161",
+            storageBucket: "mybaggage-b7161.appspot.com",
+            messagingSenderId: "496506144046"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <!-- The code below initializes the sign-in widget from FirebaseUI web. -->
+        <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
+        <script type="text/javascript">
+          var uiConfig =
+          {
+            signInSuccessUrl: 'suitcase.html',
+            signInOptions: [
+             // Specify providers you want to offer your users.
+             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+             firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url can be specified and will show up in the widget.
+            tosUrl: '<your-tos-url>'
+          };
+          // Initialize the FirebaseUI Widget using Firebase.
+          var ui = new firebaseui.auth.AuthUI(firebase.auth());
+          // The start method will wait until the DOM is loaded.
+          ui.start('#firebaseui-auth-container', uiConfig);
+        </script>
+      <!-- Include a simple background image & and title -->
+      <div>
       </div>
+        <h1 align="center" style="color:white;">By Signing in cliam your Baggage!!</h1>
+         <div id="firebaseui-auth-container">
+         </div>
 <!--end of Row 1-->
 <!-- Row 4/FOOTER begins-->
       <div class="row">
