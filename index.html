@@ -7,84 +7,89 @@
     <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/stylesheet.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="animate.min.css">
   </head>
+
   <body>
-<!--Navigation Total Page -->
-    <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!--Navigation Total Page -->
+    <div id="myNavbar" class="navbar navbar-expand-lg navbar-fixed-top" role="navigation">
       <div class="container">
-        <div>
-          <button class="btn btn-info">
-            <div class="collapse navbar-collapse d-flex justify-content-start" id="navbarNavAltMarkup">
-              <div class="navbar-nav ml-auto p-2">
-                <a class="nav-item nav-link" href="register.html" style="color: white" >Login</a>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#" class="navbar-brand"> Baggage Claim </a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#header"> Home </a></li>
-            <li><a href="#services"> Services </a></li>
-            <li><a href="#pricing"> Pricing </a></li>
-            <li><a href="#team"> Team </a></li>
-            <li><a href="#clients"> Clients </a></li>
-            <li><a href="#contact"> Contact </a></li>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="./images/134216-32.png"  alt="image missing">
+        </button>
+        <!-- <div class="navbar-header"> -->
+
+        <a href="index.html" class="navbar-brand"> Baggage Claim </a>
+
+        <!-- </div>  -->
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#services"> Services </a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing"> Pricing </a></li>
+            <li class="nav-item"><a class="nav-link" href="#team"> Team </a></li>
+            <li class="nav-item"><a class="nav-link" href="#clients"> Clients </a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"> Contact </a></li>
+            <li class="nav-item"><a class="nav-link" href="register.html"> Login </a></li>
           </ul>
         </div>
       </div>
-    </div>    <!-- End Navigation -->
+    </div>
+    <!-- End Navigation -->
+
     <!-- Header -->
     <div id="header" class="header">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6">
-            <h1> YOUR VIRTUAL SUITCASE</h1>
-            <p> A travel app that allows you to track all of your possessions from destination to destination. Input your items at destination A. Check them off when you arrive at destination B. Simple!</p>
-            <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+            <h1 class="animated bounceInLeft"> Baggage Claim</h1>
+            <p> A travel app that allows you to track all of your possessions from destination to destination. Input your items at destination A. Check them off when you arrive at destination B. </p>
+            <p> Simple! </p>
+            <a href="register.html" class="button btn btn-md btn-dark">Sign Up</a>
             <br>
             <br>
-            <br>
-            <img src="./images/image1.jpg" width="150" height="150">
-            <img src="./images/image2.jpg" width="150" height="150">
-            <img src="./images/image4.jpg" width="150" height="150">
+            <img src="https://media.giphy.com/media/3ohjUTowZFwpOVKEOA/giphy.gif" alt="image missing">
           </div>
         </div>
       </div>
-    </div><!-- End Header -->
-<!-- Container begins-->
-<!-- Services -->
+    </div>    <!-- End Header -->
+
+  <!-- Container begins-->
+  <!-- Services -->
+
     <div id="services" class="services">
       <div class="container">
         <h2> Services </h2>
-        <p> Baggage Claim offers three item accounatability services.</p>
+        <p> Baggage Claim offers three item accountability services.</p>
         <div class="row">
           <div class="col-lg-4 col-md-4">
             <i class="fa fa-map-marker" aria-hidden="true"></i>
             <h4> Travel </h4>
-            <p> a virtual suitcase for domestic and international travel as well as gym, overnight, and fashion styling jobs, etc. Keep track of all your goods as you move from point A to point B.</p>
+            <p> A virtual suitcase for domestic and international travel, as well as gym and overnight bags. Keeps track of all your goods as you move from point A to point B.</p>
           </div>
           <div class="col-lg-4 col-md-4">
             <i class="fa fa-building" aria-hidden="true"></i>
             <h4> Relocation </h4>
-            <p> A virtual UHaul for relocation. Keep track of your items as you move into that new apartment, on campus into a dorm, into a new office, or across the country into a new home.</p>
+            <p> A virtual UHaul for relocation. Keeps track of your items as you move into that new apartment, into a dorm, into a new office, or across the country into a new home.</p>
           </div>
           <div class="col-lg-4 col-md-4">
             <i class="fa fa-phone-square" aria-hidden="true"></i>
             <h4> Claim Support </h4>
-            <p> Baggage Claim logs your items, each individual valuation, as well as the valuation of the entire suitcase. If property damage or theft occurs, Baggage Claim will submit your log directly to your insurance provider for additional claim support. </p>
+            <p> Baggage Claim logs your items, each individual value, as well as the value of the entire suitcase. If property damage or theft occurs, Baggage Claim will submit your log directly to your insurance provider for additional claim support. </p>
           </div>
         </div>
       </div>
-    </div><!-- End Services -->
-    <!-- Pricing -->
+    </div>     <!-- End Services -->
+
+<!-- Pricing -->
+
     <div id="pricing" class="pricing">
       <div class="container">
         <h2> Pricing </h2>
@@ -97,11 +102,13 @@
               <b> Monthly </b>
               <p> Basic Virtual Suitcase</p>
               <hr>
-              <li> Limited Itemization </li>
-              <li> Item Valuation </li>
-              <li> Claim Support </li>
+              <ul style="list-style-type:none;">
+                <li> Limited Itemization </li>
+                <li> Item Valuation </li>
+                <li> Claim Support </li>
+              </ul>
               <hr>
-              <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+              <a href="register.html" class="button btn btn-md btn-dark">Sign Up</a>
             </div>
           </div>
           <div class="col-lg-3 col-md-3">
@@ -111,13 +118,15 @@
               <b> Monthly </b>
               <p> Premium Virtual Suitcase </p>
               <hr>
-              <li> Itemization for up to 10 Items </li>
-              <li> Photo Evidence </li>
-              <li> Item Valuation </li>
-              <li> List Storage for Future Trips</li>
-              <li> Claim Support </li>
+              <ul style="list-style-type:none;">
+                <li> Itemization for up to 10 Items </li>
+                <li> Photo Evidence </li>
+                <li> Item Valuation </li>
+                <li> List Storage for Future Trips</li>
+                <li> Claim Support </li>
+              </ul>
               <hr>
-              <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+              <a href="register.html" class="button btn btn-md btn-dark">Sign Up</a>
             </div>
           </div>
           <div class="col-lg-3 col-md-3">
@@ -127,12 +136,14 @@
               <b> One Time Purchase </b>
               <p> Basic Virtual UHaul</p>
               <hr>
-              <li> Itemization for up to 20 Items</li>
-              <li> Photo Evidence </li>
-              <li> Item Valuation </li>
-              <li> Claim Support </li>
+              <ul style="list-style-type:none;">
+                <li> Itemization for up to 20 Items</li>
+                <li> Photo Evidence </li>
+                <li> Item Valuation </li>
+                <li> Claim Support </li>
+              </ul>
               <hr>
-              <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+              <a href="register.html" class="button btn btn-md btn-dark">Sign Up</a>
             </div>
           </div>
           <div class="col-lg-3 col-md-3">
@@ -142,18 +153,22 @@
               <b> One Time Purchase</b>
               <p> Premium Virtual UHaul </p>
               <hr>
-              <li> Itemization for up to 100 Items</li>
-              <li> Photo Evidence </li>
-              <li> Item Valuation </li>
-              <li> Claim Support </li>
+              <ul style="list-style-type:none;">
+                <li> Itemization for up to 100 Items</li>
+                <li> Photo Evidence </li>
+                <li> Item Valuation </li>
+                <li> Claim Support </li>
+              </ul>
               <hr>
-              <button class="btn btn-md btn-info"><a href="register.html" style="color:white"> Sign Up </a></button>
+              <a href="register.html" class="button btn btn-md btn-dark">Sign Up</a>
             </div>
           </div>
         </div>
-      </div> <!--Container end-->
-    </div>  <!-- End Pricing -->
-  <!-- Team -->
+      </div>
+    </div> <!--Container end-->     <!-- End Pricing -->
+
+<!-- Team -->
+
     <div id="team" class="team">
       <div class="container">
         <h2> Meet Our Team </h2>
@@ -189,7 +204,103 @@
           </div>
         </div>
       </div>
-    </div><!-- End Team  -->
+    </div>   <!-- End Team -->
+
+<!-- ! Clients -->
+
+    <div id="clients" class="clients">
+      <div class="container">
+        <h2> Trusted By </h2>
+        <div class="row">
+        <div class="col-lg-3 col-md-3">
+          <a><img src="./images/client1.jpg" alt="airbnb"></a>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <a><img src="./images/client2.png" alt="uHaul"></a>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <a><img src="./images/client3.png" alt="insurance"></a>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <a><img src="./images/client4.jpg" alt="college"></a>
+        </div>
+      </div>
+        <img src="https://media.giphy.com/media/d3mmPekyEdJ3i7DO/giphy.gif" alt="collegeMoveIn">
+        <img src="https://media.giphy.com/media/l4hLy1Q1rfM5XtuIU/giphy.gif" alt="homeMove">
+        <img src="https://media.giphy.com/media/xT5LMXS7f6IlAqhB6w/giphy.gif" alt="travel">
+      </div>
+    </div>       <!-- End Clients -->
+
+<!-- Contact -->
+
+    <div id="contact" class="contact">
+      <div class="container">
+        <h2> Contact </h2>
+        <p>We'd Love to Hear From You!</p>
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Full Name">
+            </div>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Email Address">
+            </div>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" placeholder="Phone Number">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="input-group">
+            <textarea name="" cols="80" rows="6" class="form-control"></textarea>
+            </div>
+            <button class="btn btn-lg">Submit Your Message</button>
+          </div>
+        </div>
+      </div>
+    </div>    <!-- End Contact -->
+
+<!-- Footer -->
+
+    <footer>
+      <div id="footer" class="footer">
+        <div class="container">
+          <h2> Copyright 2017 </h2>
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+              <h4> Contact Us </h4>
+              <p><i class="fa fa-home" aria-hidden="true"></i> 950 N Glebe Rd, Arlington, VA 22203</p>
+              <p><i class="fa fa-envelope" aria-hidden="true"></i> hi@baggageclaim.com</p>
+              <p><i class="fa fa-phone" aria-hidden="true"></i> +1 281-330-8004</p>
+              <p><i class="fa fa-globe" aria-hidden="true"></i> wwww.baggageclaim.com</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <h4> About </h4>
+                <p><i class="fa fa-square-o" aria-hidden="true"></i> About Us</p>
+                <p><i class="fa fa-square-o" aria-hidden="true"></i> Privacy Policy</p>
+                <p><i class="fa fa-square-o" aria-hidden="true"></i> Terms and Conditions </p>
+                <p><i class="fa fa-square-o" aria-hidden="true"></i> Careers </p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <h4> Connect With Us </h4>
+              <i class="social fa fa-facebook-official" aria-hidden="true"></i>
+              <i class="social fa fa-twitter" aria-hidden="true"></i>
+              <i class="social fa fa-linkedin" aria-hidden="true"></i>
+              <i class="social fa fa-pinterest" aria-hidden="true"></i>
+              <i class="social fa fa-instagram" aria-hidden="true"></i>
+              <i class="social fa fa-github" aria-hidden="true"></i>
+              <br>
+              <input type="email" placeholder="Subscribe for Updates"><button class="btn btn-dark"> Subscribe </button>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </body>
 </html>

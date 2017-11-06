@@ -27,23 +27,23 @@ a:active {
   text-decoration: none;
 }
 
-h1,
-h2,
-h4 {
+h1{
   font-family: 'PT Sans Narrow', Arial, sans-sarif;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
+  color: #1ABC9C;
+  text-align: center;
 }
 
 p {
-  font-size: 15px
+  font-size: 16px
   line-height: 21px;
 }
 
 .btn:hover {
   background-color: #ededed !important;
   color: #3c3c3c !important;
-  border: 1px solide #fff !important;
+  border: 1px solid #fff !important;
 }
 
 /*NAVIGATION*/
@@ -79,8 +79,14 @@ p {
 }
 
 .header h1 {
-  color: #006666;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-size: 70px;
+
+}
+
+.header p {
   font-weight: bold;
+
 }
 
 /*Services*/
@@ -107,7 +113,7 @@ p {
   font-size: 30px;
   padding: 25px 20px;
   border-radius: 50%;
-  background-color: #01ADDB;
+  background-color: #1ABC9C;
   color: #fff;
 }
 
@@ -176,6 +182,140 @@ p {
 
 .team p {
   color: #737373;
+}
+
+/*//Clients*/
+
+.clients {
+  padding: 50px 0 80px;
+  background-image: url("../images/image2.jpg");
+  text-align: center;
+  color: #fff;
+
+}
+
+.client h2 {
+  color: #5e5e5e;
+
+}
+
+.clients img {
+  width: 200px;
+  opacity: 0.6;
+  cursor: pointer;
+  margin: 40px 0;
+  transition: all 500ms ease-in-out;
+}
+
+.clients li: hover img{
+  opacity: 1;
+}
+
+/*Contact*/
+
+.contact {
+  padding: 50px 0 80px;
+  text-align: center;
+
+}
+
+.contact p {
+  padding-bottom: 80px;
+  color: #737373;
+
+}
+
+.contact h2 {
+  color: #4c4c4c;
+  margin: 20px 0 20px;
+
+}
+
+.contact .input-group {
+  margin-bottom: 25px;
+}
+
+.contact .form-control{
+  border-radius: 0 !important;
+}
+
+.contact span {
+  border-radius: 0 !important;
+}
+
+.contact .btn {
+  border-radius: 0;
+  width: 100%;
+  font-size: 15px;
+  background-color: #f08080;
+  color: #fff;
+
+}
+
+.contact .btn:hover {
+
+  background-color: #a85959 !important;
+  color: #fff !important;
+
+}
+
+.btn-info{
+  color: #fff;
+}
+
+/*Footer */
+
+.footer {
+  padding: 16px;
+  color: #cccccc;
+  background-color: #222222;
+}
+
+.footer .social {
+  font size: 20px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.footer input {
+  height: 40px;
+  width: 160px;
+  padding: 5px;
+  border: none;
+  background-color: #cccccc;
+  color: #000;
+
+}
+
+.footer .btn {
+
+  padding: 10px 5px 10px;
+  margin: -3px 0 0 5px;
+}
+
+.footer p {
+  font-size: 16px;
+}
+
+/*Register HTML */
+.regHeader{
+  height: 400px;
+  align-content: center;
+  background-image: url('../images/image1.jpg');
+}
+
+#firebase{
+  align-content: center;
+}
+
+/*//Suitcase HTML*/
+.suitFont{
+  font-family:'Boogaloo', cursive;
 }
 
 /*jQuery*/
