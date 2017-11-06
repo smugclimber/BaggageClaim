@@ -153,6 +153,87 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./javascript/site.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyBU3UytS_kKst5NLalHGVDVtjCXg1_HIoY",
+        authDomain: "mybaggage-b7161.firebaseapp.com",
+        databaseURL: "https://mybaggage-b7161.firebaseio.com",
+        projectId: "mybaggage-b7161",
+        storageBucket: "mybaggage-b7161.appspot.com",
+        messagingSenderId: "496506144046"
+        };
+        firebase.initializeApp(config);
+
+   </script>
+//============================================================================================================
+//BELOW IS INVENTORY BUTTON CODE
+//============================================================================================================
+    <script>
+    var database = firebase.database();
+
+
+    $(document).on("click", "#delete", removeTask);
+    $("input").keypress(function(event)
+      {
+        if (event.which === 13) {
+          addTask(this);
+        }
+      });
+
+    // Function to add a task.
+    function addTask(button)
+    {
+      var task;
+      value = $(button).attr("value");
+      // Get the content (value) of the input box.
+      if ($(button).attr("id") === "add" || $(button).attr("id")==="new-task"){
+        task = $("#new-task").val();
+        // Clear the content of the input box.
+        $("#new-task").val("");
+      } else{
+        task = value
+      }
+      // Append that content to the #tasks div.
+      $("#tasks").append("<div>" + task + "<span id='delete'>CLEAR</span></div>");
+      addToDB(task);
+    };
+
+    function addToDB(task){
+  // Initializing our click count at 0
+      var item1 = 0;
+      item1 = task;
+      console.log(task);
+
+      // **** Store Click Data to Firebase in a JSON property called clickCount *****
+      // **** Note how we are using the Firebase .set() method ****
+      // **** .ref() refers to the path you want to save your data to
+      // **** Since we left .ref() blank, it will save to the root directory
+      database.ref().set({
+        dbItem1: item1
+    });
+}
+    // When the user clicks any button, run addTask.
+    $("button").click(function(){
+      addTask(this)
+    });
+
+    // DB CODE
+    var mainText = document.getElementById("task");
+
+    function writeUserData(){
+      var firebaseRef = firebase.database().ref();
+      firebaseRef.child('text').set('some value') = task;
+    }
+    // DB CODE
+
+    // Function to remove a task.
+    function removeTask() {
+      $(this).closest("div").remove();
+    }
+
+    </script>
   </body>
 </html>

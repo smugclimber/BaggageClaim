@@ -22,12 +22,22 @@ function addTask(button) {
   }
   // Append that content to the #tasks div.
   $("#tasks").append("<div>" + task + "<span id='delete'>CLEAR</span></div>");
+  writeUserData(task)
 
 }
 // When the user clicks any button, run addTask.
 $("button").click(function(){
   addTask(this)
 });
+
+// DB CODE
+var mainText = document.getElementById("task");
+
+function writeUserData(){
+  var firebaseRef = firebase.database().ref();
+  firebaseRef.child('text').set('some value') = task;
+}
+// DB CODE
 
 // Function to remove a task.
 function removeTask() {
